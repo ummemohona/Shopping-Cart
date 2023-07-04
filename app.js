@@ -9,6 +9,7 @@ let listCard = document.querySelector('.listCard');
 let body = document.querySelector('body');
 let total = document.querySelector('.total');
 let quantity = document.querySelector('.quantity');
+const emptyCart = document.querySelector('.empty-cart');
 
 openShopping.addEventListener('click', () => {
   body.classList.add('active');
@@ -44,6 +45,15 @@ function initApp() {
 
 initApp();
 
+function toggleEmptyCart() {
+  if (listCard.children.length === 0) {
+    emptyCart.style.display = 'block'; 
+  } else {
+    emptyCart.style.display = 'none'; 
+  }
+}
+
 clearCartBtn.addEventListener('click', () => {
   clearCart(listCard, total);
+  toggleEmptyCart();
 });

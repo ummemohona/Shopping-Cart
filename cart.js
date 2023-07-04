@@ -11,7 +11,7 @@ export function addToCard(key, listCard, total, quantity) {
   }
   reloadCard(listCard, total, quantity);
 
-  return listCards[key].quantity; // Return the updated count for the product
+  return listCards[key].quantity; 
 }
 
 function reloadCard(listCard, totalElement, quantityElement) {
@@ -69,11 +69,11 @@ function changeQuantity(key, quantity, listCard, totalElement, quantityElement) 
   }
 
   reloadCard(listCard, totalElement, quantityElement);
-  return updatedQuantity; // Return the updated quantity
+  return updatedQuantity; 
 }
 
 export function clearCart(listCard, totalElement) {
   listCards.length = 0;
   listCard.innerHTML = '';
-  totalElement.innerText = '0'; // Set total to zero
+  totalElement.innerText = '0'; 
 }
